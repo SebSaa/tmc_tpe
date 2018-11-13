@@ -29,13 +29,13 @@ public class principal {
 		
 		System.out.println("sobre 10 casos");
 		for (int i = 0; i<10; i++) {
-			patentes laplace = new patentes(16);
+			patentes laplace = new patentes(10);
 			nuevosautos = laplace.getnumpatente();
 			
 			estacionar losnuevosautos = new estacionar();
 			estaciona = losnuevosautos.estacionando(nuevosautos);	
 
-			if (estaciona ==-1) {
+			if (estaciona !=-1) {
 				casofavorablediez++;
 			}
 		}
@@ -44,13 +44,13 @@ public class principal {
 		
 		System.out.println("sobre 100 casos");
 		for (int i = 0; i<100; i++) {
-			patentes laplace = new patentes(16);
+			patentes laplace = new patentes(10);
 			nuevosautos = laplace.getnumpatente();
 			
 			estacionar losnuevosautos = new estacionar();
 			estaciona = losnuevosautos.estacionando(nuevosautos);	
 
-			if (estaciona ==-1) {
+			if (estaciona !=-1) {
 				casofavorablecien++;
 			}
 		}
@@ -59,13 +59,13 @@ public class principal {
 		
 		System.out.println("sobre 1000 casos");
 		for (int i = 0; i<1000; i++) {
-			patentes laplace = new patentes(16);
+			patentes laplace = new patentes(10);
 			nuevosautos = laplace.getnumpatente();
 			
 			estacionar losnuevosautos = new estacionar();
 			estaciona = losnuevosautos.estacionando(nuevosautos);	
 
-			if (estaciona ==-1) {
+			if (estaciona !=-1) {
 				casofavorablemil++;
 			}
 		}
