@@ -8,7 +8,7 @@ public class principal {
 		int estaciona = 0;
 		int vuelta=0;
 		double dif = 10;
-		double epsilon = 0.01;
+		double epsilon = 0.001;
 		double casofavorablediez=0;
 		double casofavorablecien=0;
 		double casofavorablemil=0;
@@ -75,26 +75,25 @@ public class principal {
 		System.out.println("Casos favorable: " + casofavorablecien + " / sobre 100 casos " + resultadolaplacecien);
 		System.out.println("Casos favorable: " + casofavorablemil + " / sobre 1000 casos " + resultadolaplacemil);
 		
-		// 
-		while (dif>epsilon) {
-			for (int i = 0; i<100; i++) {
+		// && vuelta>10
+		while (dif>epsilon || vuelta<10) {
 				patentes laplace = new patentes(10);
 				nuevosautos = laplace.getnumpatente();
 				
 				estacionar losnuevosautos = new estacionar();
 				estaciona = losnuevosautos.estacionandosinprint(nuevosautos);	
 
-				if (estaciona ==-1) {
+				if (estaciona !=-1) {
 					casofavorablemil++;
 				}
-			}
+			
 			
 			resultadolaplacemil = casofavorablemil / 100;
 			dif = resultadolaplacemil - resante;
-			
+			if (dif<0) {dif=dif*-1;}
 			vuelta++;
 			System.out.println("anterior " + resante + " nuevo " + resultadolaplacemil);
-			System.out.println("**   DIFERENCIA  ********************** " + dif + " CICLO " + vuelta);
+			System.out.println("**   DIFERENCIA  ********************** " + dif + " VUELTA " + vuelta);
 			
 			resante = resultadolaplacemil;
 			
