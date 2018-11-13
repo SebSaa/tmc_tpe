@@ -38,7 +38,7 @@ public class patentes {
 	}
 	
 	public void mostrar_patentes(int [] arreglo) {
-		for (int i=0; i<arreglo.length;i++) {
+		for (int i=0; i<20;i++) {
 			System.out.print(arreglo[i]+ " * ");
 		}
 	}

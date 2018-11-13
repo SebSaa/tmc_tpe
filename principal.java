@@ -8,7 +8,7 @@ public class principal {
 		int estaciona = 0;
 		int vuelta=0;
 		double dif = 10;
-		double epsilon = 0.001;
+		double epsilon = 0.01;
 		double casofavorablediez=0;
 		double casofavorablecien=0;
 		double casofavorablemil=0;
@@ -20,11 +20,11 @@ public class principal {
 		
 		patentes numeros= new patentes(5);
 		arreglo = numeros.getnumpatente();
-		numeros.mostrar_patentes(arreglo);
+		//numeros.mostrar_patentes(arreglo);
 		
 		estacionar estautos  = new estacionar();
 		resultado = estautos.estacionando(arreglo);	
-		System.out.println("numero retornado " + resultado);
+		//System.out.println("numero retornado " + resultado);
 		
 		
 		System.out.println("sobre 10 casos");
@@ -76,7 +76,7 @@ public class principal {
 		System.out.println("Casos favorable: " + casofavorablemil + " / sobre 1000 casos " + resultadolaplacemil);
 		
 		// && vuelta>10
-		while (dif>epsilon || vuelta<10) {
+		while (dif>epsilon || vuelta<=10) {
 				patentes laplace = new patentes(10);
 				nuevosautos = laplace.getnumpatente();
 				
